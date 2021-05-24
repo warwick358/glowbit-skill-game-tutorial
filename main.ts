@@ -8,6 +8,7 @@ input.onButtonPressed(Button.B, function () {
 let score = 0
 let active = 0
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
+strip.setBrightness(50)
 active = 0
 let direction = 1
 let red = randint(30, 127)
