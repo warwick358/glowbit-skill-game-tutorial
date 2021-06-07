@@ -1,13 +1,7 @@
 # skillgame
 
-## Step 1 setup
-We will start with setting up the microbit to use the neopixal LED's
-in the blocks section click the "advanced" then click "extention" 
-in this section you will need to select the neopixal extention.
-This has been done in the tutorial for you.
-
-## step 2
-Next we will create a variable calles "strip" click the "variable" tab
+## step 1 Setup
+We will start by create a variable calles "strip" click the "variable" tab
 in the blocks then make a variable call it "strip". 
 Go to the "neopixal" tab and get the  "set strip" block and place it in the "on start" block. 
 
@@ -16,8 +10,8 @@ let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
 
 ```
 
-## step 3
-make sure that the pin = "0" this is where we connect the wire on the microbit.
+## step 2 Setup continued
+Make sure that the pin = "0" this is where we connect the wire on the microbit.
 Then change the number of LED's to "13" this is how many lights we have on the GlowBit.
 alos make sure the LED'd are set as "RGB" this is the tupe of light we have.
 
@@ -27,7 +21,7 @@ let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 
 ```
 
-## Step 4
+## Step 3 Set the brightness
 In this step we will set the brightness. LED's use a scale from 0 - 255 for brighness.
 We will go to the "more" tab
 under the "neopixal" tab and select the "setBrightness" block place it under the "set strip" block.
@@ -37,15 +31,16 @@ Change the number to 50.
 let strip = neopixel.create(DigitalPin.P0, 13, NeoPixelMode.RGB)
 strip.setBrightness(50)
 ```
-## step 5 making all the variables
+## step 4 making all the variables
 We will use 6 variables in this program so we will male them all now.
 Go to the "variables" tab and make the following variables
 "active", "blue", "direction", "green", "red", "score"
 
-## step 6
+## step 5
 Now we will set the rest of the start block.
-under set brightness place the following blocks they will be all in the "variables" tab.
-set "active to 0, set "direction" to 1, set "red" to 0, set "blue" to 0, set "green" to 0.
+Under set brightness place the following blocks they will be all in the "variables" tab.
+Set "active to 0",      Set "direction" to 1,       Set "red" to 0,     Set "blue" to 0,    Set "green" to 0.
+
 In the "math" tab find the "pick random" block and place it in the "0" on the red, blue, and green blocks.
 We will then change the numbers to be "30 to 127" in each of the new blocks.
 Under the "neopixal" tab find the "strip clear" block and place it as the last block for this section.
@@ -63,9 +58,9 @@ strip.clear()
 
 ```
 
-## step 7
+## step 6
 Here we will make a new block.
-open the "input" tab and find the "on button press" block and plce it in the workspace.
+Open the "input" tab and find the "on button press" block and plce it in the workspace.
 Next open the "logic"tab and find the "if then else" block and plce it in the "button press" block.
 Open the "logic" tab and find the "0=0"block and replace "true" with the block.
 open the "variable" tab and chose the variable "active" and plce it in the first "0" in the "0=0" block.
@@ -81,7 +76,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 ```
-## step 8
+## step 7
 Here we will finish the button press block.
 open the "variable" tab and find the "change by" block. Place this block after "then" and before "else" in the if then statement.
 Use the drop down to change the variable to "score" and the number to 25.
@@ -100,7 +95,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-## step 9
+## step 8
 Now we can start the forever section of the code.
 start with the "neopixal" tab and the "strip clear" block. 
 Place it in the forever loop.
@@ -125,7 +120,7 @@ basic.forever(function () {
 })
 ```
 
-## step 10
+## step 9
 Go to the "logic tab and find the "0 < 0" block and replace the first "true" in the "if then else" block.
 Change the first "0" to the "variable" "active" and the second "0" to "12".
 use the dropdown tab to set the symbol to "greater than or equal to".
@@ -150,7 +145,7 @@ basic.forever(function () {
 })
 
 ```
-## step 11
+## step 10
 go to the "neopixal" tab "more" tab and get the "set pixal coulor at 0" block and place it under the if then else we just made.
 go to the "neopixal" tab "more" tab and get the "red 255 green 255 blue 255" block and place it in the "red" dropdown box.
 go to the "variable" tab and select ""active" and replace the "0".
@@ -177,7 +172,7 @@ basic.forever(function () {
 })
 ```
 
-## step 12
+## step 11
 Open the "basic" tab and get the "pause" block and place it under the "strip show" block.
 open the "math" tab and get the "0 - 0" block and place it in the "pause" block.
 replace the first "0" with "400" and the second "0" with the variable "score"
@@ -204,7 +199,7 @@ basic.forever(function () {
     basic.pause(400 - score)
 ```
 
-## step 13
+## step 12
 In the "loops" tab select a "while do" block and place it under the "pause block.
 go to the "input" tab and get a "buttonIsPressed" block replace the "true" in the "while do" block.
 Change the button in the dropdown tab to button "B".
@@ -240,7 +235,7 @@ basic.forever(function () {
     active += direction
 })
 ```
-## step 14
+## step 13
 Please check all the code and the download the game to the microbit.
 
 
