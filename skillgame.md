@@ -89,7 +89,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 ## step 8
 Here we will finish the button press block.
-open the "variable" tab and find the "change by" block. Place this block after "then" and before "else" in the if then statement.
+Open the "variable" tab and find the "change by" block. Place this block after "then" and before "else" in the if then statement.
 Use the drop down to change the variable to "score" and the number to 25.
 Then go to the "advanced" tab then the "control" tab and find the "rest" block and place it after "else".
 
@@ -108,13 +108,13 @@ input.onButtonPressed(Button.B, function () {
 
 ## step 9
 Now we can start the forever section of the code.
-start with the "neopixal" tab and the "strip clear" block. 
+Start with the "neopixal" tab and the "strip clear" block. 
 Place it in the forever loop.
 Next we will go the the "logic" tab and get a "if then else" block and plce it under the "strip clear" tab.
 In the "variable" tab we need a "set to" block  we will place this block after "then"
 Using the drop down change the variable to "direction" and the number to "-1".
 At the bottom of the "if then else" block is a "+" symbol, click this to add a "else if" section.
-in this section place a "set to" block from the "variable" tab. 
+In this section place a "set to" block from the "variable" tab. 
 Using the drop down change the variable to "direction" and the number to "1".
 ```block
 let direction = 0
@@ -138,7 +138,7 @@ use the dropdown tab to set the symbol to "greater than or equal to".
 
 Go to the "logic tab and find the "0 < 0" block and replace the secont "true" in the "if then else" block.
 Change the first "0" to the "variable" "active".
-use the dropdown tab to set the symbol to "les than or equal to".
+Use the dropdown tab to set the symbol to "les than or equal to".
 
 ```block
 let direction = 0
@@ -157,10 +157,10 @@ basic.forever(function () {
 
 ```
 ## step 11
-go to the "neopixal" tab "more" tab and get the "set pixal coulor at 0" block and place it under the if then else we just made.
-go to the "neopixal" tab "more" tab and get the "red 255 green 255 blue 255" block and place it in the "red" dropdown box.
-go to the "variable" tab and select ""active" and replace the "0".
-go to the "neopixal" tab get the "strip show" block and place it under the "set pixal coulor at 0" block
+Go to the "neopixal" tab "more" tab and get the "set pixal coulor at 0" block and place it under the if then else we just made.
+Go to the "neopixal" tab "more" tab and get the "red 255 green 255 blue 255" block and place it in the "red" dropdown box. Replace "255" with the corresponding variable eg. red "red".
+Go to the "variable" tab and select ""active" and replace the "0".
+Go to the "neopixal" tab get the "strip show" block and place it under the "set pixal coulor at 0" block
 
 ```block
 let direction = 0
@@ -212,12 +212,12 @@ basic.forever(function () {
 
 ## step 13
 In the "loops" tab select a "while do" block and place it under the "pause block.
-go to the "input" tab and get a "buttonIsPressed" block replace the "true" in the "while do" block.
+Go to the "input" tab and get a "buttonIsPressed" block replace the "true" in the "while do" block.
 Change the button in the dropdown tab to button "B".
 In the "do" section place a "pause" block from the "basic" tab.
 Change to pause number to "100"
-go to the "variable" tab and select the "change by" block and place it under the "pause" block from the "basic" tab.
-use the dropdown to change to "active" and  insert another variable "direction" in the last box.
+Go to the "variable" tab and select the "change by" block and place it under the "pause" block from the "basic" tab.
+Then use the dropdown to change to "active" and  insert the variable "direction" in the last box replacing the "0".
 
 ```block
 
